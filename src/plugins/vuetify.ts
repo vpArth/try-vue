@@ -10,12 +10,21 @@ import Vuetify, {
   VIcon,
   VImg,
   VLayout,
+  VList,
+  VListItem,
+  VListItemContent,
   VSpacer,
 } from 'vuetify/lib';
 import ru from 'vuetify/src/locale/ru';
 
 Vue.use(Vuetify, {
-  components: { VFlex, VLayout, VContainer, VImg, VCard, VCardTitle, VCardSubtitle, VCardText, VSpacer, VIcon, VBtn },
+  components: {
+    VFlex, VLayout, VContainer, VImg,
+    VCard, VCardTitle, VCardSubtitle, VCardText,
+    VSpacer,
+    VIcon, VBtn,
+    VList, VListItem, VListItemContent,
+  },
   customProperties: true,
 });
 

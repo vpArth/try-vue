@@ -1,11 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contact.vue renders props when passed 1`] = `
+exports[`contact/ Card.vue renders card with passed props 1`] = `
 <div class="v-card v-sheet theme--light">
   <div class="v-card__title">
     <h2 class="card-title">Contact Name</h2>
     <div class="spacer"></div> <a href="tel:+79998887766" class="mx-2 btn-phone v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--tile theme--light v-size--default success--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--left material-icons theme--dark">phone</i> <span class="caption">+79998887766</span></span></a> <a href="mailto:inbox@example.org" class="mx-2 btn-email v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--tile theme--light v-size--default success--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--left material-icons theme--dark">email</i> <span class="caption">inbox@example.org</span></span></a> <button type="button" class="mx-2 btn-remove v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--small"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate material-icons theme--light error--text">delete</i></span></button>
   </div>
   <div class="v-card__text">My contact</div>
+</div>
+`;
+
+exports[`contact/ List.vue renders empty list 1`] = `<div role="list" class="v-list v-sheet v-sheet--tile theme--light"></div>`;
+
+exports[`contact/ List.vue renders two cards 1`] = `
+<div role="list" class="v-list v-sheet v-sheet--tile theme--light">
+  <div tabindex="-1" role="listitem" class="v-list-item theme--light">
+    <div class="v-list-item__content">
+      <div class="v-card v-sheet theme--light">
+        <div class="v-card__title">
+          <h2 class="card-title">Contact 1</h2>
+          <div class="spacer"></div> <a href="tel:+79998887766" class="mx-2 btn-phone v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--tile theme--light v-size--default success--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--left material-icons theme--dark">phone</i> <span class="caption">+79998887766</span></span></a> <a href="mailto:one@example.org" class="mx-2 btn-email v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--tile theme--light v-size--default success--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--left material-icons theme--dark">email</i> <span class="caption">one@example.org</span></span></a> <button type="button" class="mx-2 btn-remove v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--small"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate material-icons theme--light error--text">delete</i></span></button>
+        </div>
+        <div class="v-card__text">Contact 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <div tabindex="-1" role="listitem" class="v-list-item theme--light">
+    <div class="v-list-item__content">
+      <div class="v-card v-sheet theme--light">
+        <div class="v-card__title">
+          <h2 class="card-title">Contact 2</h2>
+          <div class="spacer"></div> <a href="tel:+79996667788" class="mx-2 btn-phone v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--tile theme--light v-size--default success--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--left material-icons theme--dark">phone</i> <span class="caption">+79996667788</span></span></a> <a href="mailto:two@example.org" class="mx-2 btn-email v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--tile theme--light v-size--default success--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate v-icon--left material-icons theme--dark">email</i> <span class="caption">two@example.org</span></span></a> <button type="button" class="mx-2 btn-remove v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--small"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate material-icons theme--light error--text">delete</i></span></button>
+        </div>
+        <div class="v-card__text">Contact 2
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
