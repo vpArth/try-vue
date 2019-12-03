@@ -1,9 +1,21 @@
 import Vue from 'vue';
-import Vuetify, { VContainer, VFlex, VImg, VLayout } from 'vuetify/lib';
+import Vuetify, {
+  VBtn,
+  VCard,
+  VCardSubtitle,
+  VCardText,
+  VCardTitle,
+  VContainer,
+  VFlex,
+  VIcon,
+  VImg,
+  VLayout,
+  VSpacer,
+} from 'vuetify/lib';
 import ru from 'vuetify/src/locale/ru';
 
 Vue.use(Vuetify, {
-  components: { VFlex, VLayout, VContainer, VImg },
+  components: { VFlex, VLayout, VContainer, VImg, VCard, VCardTitle, VCardSubtitle, VCardText, VSpacer, VIcon, VBtn },
   customProperties: true,
 });
 
