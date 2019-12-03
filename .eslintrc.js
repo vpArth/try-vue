@@ -15,6 +15,8 @@ module.exports = {
     'semi': 'off',
     'indent': 'off',
     'object-curly-spacing': 'off',
+    'object-property-newline': 'off',
+    'space-before-function-paren': 'off',
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
