@@ -21,7 +21,7 @@ describe('contact/', () => {
         localVue,
         vuetify,
         propsData: { title, phone, email },
-        slots: { 'default': descr },
+        slots:     { 'default': descr },
       });
 
       const cardTitle = wrapper.find('.v-card__title');

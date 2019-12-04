@@ -1,24 +1,12 @@
 import Vue from 'vue';
 import Vuetify, {
-  VBtn,
-  VCard,
-  VCardSubtitle,
-  VCardText,
-  VCardTitle,
-  VContainer,
-  VFlex,
-  VIcon,
-  VImg,
-  VLayout,
-  VList,
-  VListItem,
-  VListItemContent,
-  VSpacer,
+  VBtn, VCard, VCardSubtitle, VCardText, VCardTitle, VContainer, VFlex, VIcon, VImg, VLayout, VList, VListItem,
+  VListItemContent, VSpacer,
 } from 'vuetify/lib';
 import ru from 'vuetify/src/locale/ru';
 
 Vue.use(Vuetify, {
-  components: {
+  components:       {
     VFlex, VLayout, VContainer, VImg,
     VCard, VCardTitle, VCardSubtitle, VCardText,
     VSpacer,
@@ -32,18 +20,18 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#EE44AA',
+        primary:   '#EE44AA',
         secondary: '#424242',
-        accent: '#82B1FF',
-        error: '#FF5252',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FFC107',
+        accent:    '#82B1FF',
+        error:     '#FF5252',
+        info:      '#2196F3',
+        success:   '#4CAF50',
+        warning:   '#FFC107',
       },
     },
   },
-  lang: {
-    locales: { ru },
+  lang:  {
+    locales: {ru},
     current: 'ru',
   },
   icons: {

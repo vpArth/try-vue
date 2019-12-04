@@ -1,6 +1,6 @@
 export const M_CONTACT_LOAD = 'm_contact_load';
-export const M_CONTACT_ADD = 'm_contact_add';
-export const M_CONTACT_DEL = 'm_contact_del';
+export const M_CONTACT_ADD  = 'm_contact_add';
+export const M_CONTACT_DEL  = 'm_contact_del';
 
 export interface CardInfo {
   title: string;
@@ -26,16 +26,17 @@ export interface ContactStore {
 
 export const Store: ContactStore = {
   namespaced: true,
-  state:      {list: []},
+
+  state: {list: []},
 
   mutations: {
     [M_CONTACT_LOAD]: (state: ContactState, {cards}) => {
       state.list = [...cards.map(card => ({...card}))];
     },
-    [M_CONTACT_ADD]: (state: ContactState, {card}: { card: CardInfo }) => {
+    [M_CONTACT_ADD]:  (state: ContactState, {card}: { card: CardInfo }) => {
       state.list = [...state.list, {...card}];
     },
-    [M_CONTACT_DEL]: (state: ContactState, {card}: { card: CardInfo }) => {
+    [M_CONTACT_DEL]:  (state: ContactState, {card}: { card: CardInfo }) => {
       state.list = state.list.filter(c => c !== card);
     },
   },
