@@ -23,7 +23,9 @@ export interface ContactStore {
     [M_CONTACT_ADD]: (state: ContactState, payload: { card: CardInfo }) => void,
     [M_CONTACT_DEL]: (state: ContactState, payload: { card: CardInfo }) => void,
   },
-  actions: {},
+  actions: {
+    [A_CONTACT_DELINDEX]: ({commit: Function, state: ContactState}, {index: number}) => void;
+  },
 }
 
 export const Store: ContactStore = {
