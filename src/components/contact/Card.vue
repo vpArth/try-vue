@@ -24,8 +24,9 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import phoneFilter from '@/filters/phone';
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator';
 
 @Component({
   filters: { phoneFilter },

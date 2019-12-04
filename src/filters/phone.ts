@@ -1,4 +1,4 @@
-import { Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 
 const reQuote = (str: string) =>
   str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');

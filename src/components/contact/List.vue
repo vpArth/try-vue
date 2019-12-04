@@ -19,14 +19,9 @@
 
 <script lang="ts">
 import ContactCard from '@/components/contact/Card.vue';
-import { Component, Prop, Vue } from 'vue-property-decorator';
-
-export interface CardInfo {
-  title: string;
-  phone: string;
-  email: string;
-  description: string;
-}
+import { CardInfo } from '@/store/contact';
+import Vue from 'vue';
+import { Component, Prop } from 'vue-property-decorator';
 
 @Component({
   components: { ContactCard },
