@@ -26,7 +26,7 @@ describe('contact/', () => {
 
       const cardTitle = wrapper.find('.v-card__title');
       expect(cardTitle.find('.card-title').text()).toBe(title);
-      expect(cardTitle.find('.btn-phone .caption').text()).toBe(phone);
+      expect(cardTitle.find('.btn-phone .caption').text()).toBe('+7 (999) 888-77-66');
       expect(cardTitle.find('.btn-email .caption').text()).toBe(email);
       expect(cardTitle.find('.btn-phone').attributes('href')).toBe(`tel:${phone}`);
       expect(cardTitle.find('.btn-email').attributes('href')).toBe(`mailto:${email}`);
