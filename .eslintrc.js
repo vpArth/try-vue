@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: {
+  env:  {
     node: true,
   },
   'extends': [
@@ -9,14 +9,15 @@ module.exports = {
     '@vue/typescript',
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'comma-dangle': ['error', 'always-multiline'],
-    'semi': 'off',
-    'indent': 'off',
-    'object-curly-spacing': 'off',
-    'object-property-newline': 'off',
+    'no-console':                  process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger':                 process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'comma-dangle':                ['error', 'always-multiline'],
+    'semi':                        'off',
+    'indent':                      'off',
+    'object-curly-spacing':        'off',
+    'object-property-newline':     'off',
     'space-before-function-paren': 'off',
+    'key-spacing':                 ['error', {align: 'value'}],
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -32,4 +33,4 @@ module.exports = {
       },
     },
   ],
-}
+};
