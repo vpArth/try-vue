@@ -2,6 +2,8 @@ export const M_CONTACT_LOAD = 'm_contact_load';
 export const M_CONTACT_ADD  = 'm_contact_add';
 export const M_CONTACT_DEL  = 'm_contact_del';
 
+export const A_CONTACT_DELINDEX  = 'a_contact_delindex';
+
 export interface CardInfo {
   title: string;
   phone?: string;
@@ -41,7 +43,11 @@ export const Store: ContactStore = {
     },
   },
 
-  actions: {},
+  actions: {
+    [A_CONTACT_DELINDEX]: ({commit, state}: {commit: Function, state: ContactState}, {index}: {index: number}) => {
+      commit(M_CONTACT_DEL, {card: state.list[index]});
+    },
+  },
 };
 
 export default Store;

@@ -1,11 +1,11 @@
-import { ContactState, M_CONTACT_ADD, M_CONTACT_DEL, M_CONTACT_LOAD, Store } from '@/store/contact';
+import { A_CONTACT_DELINDEX, ContactState, M_CONTACT_ADD, M_CONTACT_DEL, M_CONTACT_LOAD, Store } from '@/store/contact';
 
 describe('contact/Store', () => {
+  let state: ContactState;
+  beforeEach(() => {
+    state = {list: []};
+  });
   describe('mutations', () => {
-    let state: ContactState;
-    beforeEach(() => {
-      state = {list: []};
-    });
     it('Load', () => {
       const card1 = {title: 'Card 1'};
       const card2 = {title: 'Card 2'};
@@ -36,6 +36,17 @@ describe('contact/Store', () => {
 
       expect(state.list.length).toBe(2);
       expect(state.list).toEqual([cards[0], cards[2]]);
+    });
+  });
+  describe('actions', () => {
+    it('Del by index', () => {
+      const cards  = [1, 2, 3].map(i => ({title: `Card ${i}`}));
+      const commit = jest.fn();
+
+      Store.mutations[M_CONTACT_LOAD](state, {cards});
+      Store.actions[A_CONTACT_DELINDEX]({commit, state}, {index: 1});
+
+      expect(commit).toBeCalledWith(M_CONTACT_DEL, {card: cards[1]});
     });
   });
 });
